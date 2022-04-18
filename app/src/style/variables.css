@@ -1,0 +1,23 @@
+:root {
+   /* Colours */
+   --primary-color: #FFFFFF;
+   --secondary-color: #444444;
+   --tetriary-color: #F5F5F5;
+   --highlight-color-y: #FFF500;
+   --highlight-color-o: #FFB800;
+   --highlight-color-p: #EC7AFF;
+
+   /* Font */
+   --font-family: "PTSans";
+   --font-size-body: 12px;
+
+   /* Spacing */
+   --spacing-padding: 5px;
+   --spacing-small: 10px;
+   --spacing-medium: 20px;
+   --spacing-big: 100px;
+
+   /* Border */
+
+   /* Misc */
+}

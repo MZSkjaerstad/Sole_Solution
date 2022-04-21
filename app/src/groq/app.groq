@@ -1,0 +1,34 @@
+{
+   "products": *[_type == "products"]| order(name asc){
+         name,
+         price,
+         description,
+         "brand": brand-> {
+            brandName,
+            "brandLogo": brandLogo.asset->.url
+         },
+         "slug": slug.current,
+         "colours": colours[]{
+            colourName,
+            colourPicker,
+            "thumbnail": thumbnail.asset->.url,
+            "imageAssets": images[] {
+               "image": asset->.url
+            }
+         },
+         "sizes": sizes[]-> {
+            inches,
+            US,
+            EU,
+            UK,
+         },
+         highlighted,
+         inStock,
+   },
+
+   "brands": *[_type == "brands"]| order(name asc) {
+         brandName,
+         "brandLogo": brandLogo.asset->.url,
+         
+   }
+}

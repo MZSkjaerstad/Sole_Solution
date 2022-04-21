@@ -1,7 +1,13 @@
 export default {
    state() {
 		return {
-			productList: null,
+			productList: []
 		}
 	},
+	
+	getters: {
+		getProductList(state) {
+			return state.productList
+		}
+	}
 }

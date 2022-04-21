@@ -1,12 +1,48 @@
 body {
    color: var(--secondary-color);
-   font-size: var(--font-size-desktop);
-   font-family: var(--font-family);
+   font-size: var(--font-size-body-base);
+   font-family: var(--font-family-body);
    background: var(--primary-color);
 }
 
-@media screen and (max-width: 700px) {
-   body {
+h1 {
+   font-size: var(--font-size-display-large);
+   font-family: var(--font-family-display);
+   font-weight: 600;
+   text-transform: uppercase;
+}
 
+h2 {
+   font-size: var(--font-size-display-small);
+   font-family: var(--font-family-display);
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+
+}
+
+@keyframes highlightedColour {
+   0% {
+      background: var(--highlight-color-y);
+   }
+   50% {
+      background: var(--highlight-color-p);
+   }
+   100% {
+      background: var(--highlight-color-o);
+   }
+}
+
+@keyframes highlightedColourTr {
+   0% {
+      background: var(--highlight-color-y-tr);
+   }
+   50% {
+      background: var(--highlight-color-p-tr);
+   }
+   100% {
+      background: var(--highlight-color-o-tr);
    }
 }

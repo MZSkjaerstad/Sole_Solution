@@ -1,24 +1,24 @@
 <template>
-   <main class="welcome">
-      Welcome Martin, Vue boilerplate is ready.
+   <main class="home">
+      <Landing />
+      <ProductDisplay/>
    </main>
 </template>
 
 <script>
-// import { defineComponent } from 'vue'
+import Landing from '../components/Landing.vue'
+import ProductDisplay from '../components/ProductDisplay.vue'
 
 export default {
    components: {
-
+      Landing,
+      ProductDisplay
    }
 }
 </script>
 
 <style>
-   .welcome {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+   .home {
+      z-index: 10;
    }
 </style>

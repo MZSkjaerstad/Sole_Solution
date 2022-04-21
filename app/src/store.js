@@ -5,5 +5,5 @@ export default {
 	modules: {
 		products,
 		cart,
-	}
+	},
 };

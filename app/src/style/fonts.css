@@ -28,14 +28,14 @@
 
 @font-face {
    font-family: 'PTSansNarrow';
-   src: url('/assets/font/PTSansNarrow-Regular.ttf') format('truetype');
+   src: url('/assets/fonts/PTSansNarrow-Regular.ttf') format('truetype');
    font-weight: 400;
    font-style: normal;
 }
 
 @font-face {
    font-family: 'PTSansNarrow';
-   src: url('/assets/font/PTSansNarrow-Bold.ttf') format('truetype');
+   src: url('/assets/fonts/PTSansNarrow-Bold.ttf') format('truetype');
    font-weight: 600;
    font-style: normal;
 }

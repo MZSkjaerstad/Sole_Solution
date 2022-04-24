@@ -80,19 +80,20 @@
    .header__cart-icon {
       width: auto;
       height: 100%;
+      border-radius: 10px 0 10px 0;
    }
 
    .header__logo-button:hover {
       animation-name: highlightedColour;
-      animation-duration: 5s;
+      animation-duration: 10s;
       animation-iteration-count: infinite;
-      animation-direction: alternate;
+      animation-direction: linear;
    }
 
    .header__cart-icon:hover {
       animation-name: highlightedColour;
-      animation-duration: 5s;
+      animation-duration: 10s;
       animation-iteration-count: infinite;
-      animation-direction: alternate;
+      animation-direction: linear;
    }
 </style>

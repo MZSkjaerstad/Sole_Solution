@@ -1,26 +1,38 @@
 <template>
     <Header />
-    <RouterView />
+    <AnnouncementBar />
+    <Loading v-if="isLoading.loading === true"/>
+    <RouterView v-else/>
     <Footer />
 </template>
 
 <script>
+    import appMixin from '../mixins/appMixin.js'
     import Header from '../components/Header.vue'
+    import Loading from '../components/Loading.vue'
+    import AnnouncementBar from '../components/AnnouncementBar.vue'
     import Footer from '../components/Footer.vue'
     import query from '../groq/app.groq?raw'
-    import appMixin from '../mixins/appMixing.js'
 
     export default {
         components: {
           Header,
-          Footer
+          Loading,
+          AnnouncementBar,
+          Footer,
         },
 
         mixins: [appMixin],
 
         async created() {
-            await this.fetchSneakerSanity(query)
+            await this.fetchSneakerSanity(query);
         },
+
+        computed: {
+            isLoading() {
+                return this.$store.getters.getLoading;
+            }
+        }
     }
 </script>
 

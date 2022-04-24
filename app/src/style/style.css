@@ -19,19 +19,26 @@ h2 {
    text-transform: uppercase;
 }
 
+/* Media query */
+
 @media screen and (max-width: 700px) {
 
 }
+
+/* Colour animations */
 
 @keyframes highlightedColour {
    0% {
       background: var(--highlight-color-y);
    }
-   50% {
+   33% {
       background: var(--highlight-color-p);
    }
-   100% {
+   66% {
       background: var(--highlight-color-o);
+   }
+   100% {
+      background: var(--highlight-color-y);
    }
 }
 
@@ -39,10 +46,28 @@ h2 {
    0% {
       background: var(--highlight-color-y-tr);
    }
-   50% {
+   33% {
       background: var(--highlight-color-p-tr);
    }
-   100% {
+   66% {
       background: var(--highlight-color-o-tr);
+   }
+   100% {
+      background: var(--highlight-color-y-tr);
+   }
+}
+
+@keyframes highlightedColourVector {
+   0% {
+      fill: var(--highlight-color-y);
+   }
+   33% {
+      fill: var(--highlight-color-p);
+   }
+   66% {
+      fill: var(--highlight-color-o);
+   }
+   100% {
+      fill: var(--highlight-color-y);
    }
 }

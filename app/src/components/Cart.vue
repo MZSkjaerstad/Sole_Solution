@@ -1,7 +1,7 @@
 <template>
    <menu class="cart">
       <div class="cart__top">
-         <div class="cart__header">your shopping cart</div>
+         <div class="cart__header"><h2>your shopping cart</h2></div>
 
          <button class="cart__button" @click="toggleMenu">
             <img class="cart__icon" src="/assets/vector/return.svg" alt="Return back to page button">
@@ -34,6 +34,13 @@
       padding: var(--spacing-small);
       display: flex;
       justify-content: space-between;
+      align-content: center;
+   }
+
+   .cart__header {
+      height: 100%;
+      display: flex;
+      align-items: center;
    }
 
    .cart__button {
@@ -45,6 +52,7 @@
    .cart__icon {
       width: auto;
       height: 100%;
+      border-radius: 10px 0 10px 0;
    }
 
    .cart__icon:hover {

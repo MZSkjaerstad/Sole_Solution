@@ -10,11 +10,11 @@
                <div class="product__detail">
                   <h2 class="products__title"> {{ product.name }} </h2>
                      
-                  <div class="products__price"> {{ product.price }},- </div>
+                  <p class="products__price"> {{ product.price }},- </p>
                </div>
 
                <figure class="products__image-frame">
-                  <img class="products__image" :src="product.colours[0].thumbnail" alt="">
+                  <img class="products__image" :src="product.colours[0].thumbnail">
                </figure>
             </router-link>
          </div>
@@ -69,9 +69,9 @@
       object-fit: contain;
       z-index: 14;
       animation-name: highlightedColourTr;
-      animation-duration: 5s;
+      animation-duration: 10s;
       animation-iteration-count: infinite;
-      animation-direction: alternate;
+      animation-direction: linear;
    }
 
    .products__price {
@@ -89,7 +89,6 @@
 
    .products__image {
       width: 110%;
-      object-fit: contain;
       z-index: 10;
       display: flex;
    }

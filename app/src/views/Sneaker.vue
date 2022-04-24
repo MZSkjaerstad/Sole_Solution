@@ -4,15 +4,16 @@
 
 <script>
 import ProductArticle from '../components/ProductArticle.vue'
+import appMixin from '../mixins/appMixin.js'
+
 
 export default {
    components: {
-      ProductArticle
+      ProductArticle,
    },
+
+   mixins: [appMixin],
 }
 </script>
 
-<style>
-
-</style>
 

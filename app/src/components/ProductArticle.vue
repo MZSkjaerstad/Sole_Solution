@@ -127,6 +127,8 @@
 
    .article__image {
       width: 110%;
+      height: 110%;
+      object-fit: cover;
    }
 
    .article__roulette-navigators {

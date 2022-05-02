@@ -9,6 +9,8 @@
       <div class="header__cart">
          <button class="header__button header__cart-button" @click="toggleMenu">
             <img class="header__cart-icon" src="/assets/vector/cart.svg" alt="Cart menu button">
+
+            <div class="header__cart-counter" v-if="cart.length > 0">{{cart.length}}</div>
          </button>
 
          <Cart v-if="cartToggled === true" :toggleMenu="toggleMenu"/>
@@ -28,6 +30,12 @@
       data() {
          return {
             cartToggled: false
+         }
+      },
+
+      computed: {
+         cart() {
+            return this.$store.getters.getCart
          }
       },
 
@@ -81,6 +89,21 @@
       width: auto;
       height: 100%;
       border-radius: 10px 0 10px 0;
+   }
+
+   .header__cart-counter {
+      height: 0.8rem;
+      width: 0.8rem;
+      font-size: 0.6rem;
+      font-weight: 600;
+      transform: translateY(-1.1rem) translateX(2rem);
+      z-index: 20;
+      background: var(--primary-color);
+      border-radius: 50%;
+      filter: drop-shadow(0px 0px 1.4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
    }
 
    .header__logo-button:hover {

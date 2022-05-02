@@ -1,6 +1,8 @@
-import products from './modules/products'
+import products from './modules/products';
 import cart from './modules/cart';
-import landingSettings from './modules/landingSettings.js'
+import landingSettings from './modules/landingSettings.js';
+import highlighted from './modules/highlighted.js';
+import subscribers from './modules/subscribers.js';
 
 export default {
 	state() {
@@ -12,19 +14,23 @@ export default {
 	modules: {
 		products,
 		cart,
-		landingSettings
+		landingSettings,
+		highlighted,
+		subscribers
 	},
 
 	mutations: {
 		installData(state, data) {
 			state.products.productList = data.products;
 			state.landingSettings.carouselle = data.carouselleImages;
-			console.log(state.products.productList)
-			console.log(state.landingSettings.carouselle )
+			state.highlighted.highlightedList = data.highlighted;
+			console.log('Product installed', state.products.productList)
+			console.log('Highlighted installed', state.highlighted.highlightedList)
+			console.log('Landing installed', state.landingSettings.carouselle)
 		},
 		toggleLoading(state) {
 			state.loading = !state.loading;
-			console.log('Is loading' ,state.loading)
+			console.log('Loading' ,state.loading)
 		}
 	},
 

@@ -1,5 +1,5 @@
 {
-   "products": *[_type == "products"]| order(name asc){
+   "products": *[_type == "products" && inStock == true]{
       name,
       price,
       description,
@@ -21,9 +21,32 @@
          US,
          EU,
          UK,
+      }
+   },
+
+   "highlighted": *[_type == "products" && inStock == true && highlighted == true] {
+      name,
+      price,
+      description,
+      "brand": brand-> {
+         brandName,
+         "brandLogo": brandLogo.asset->.url
       },
-      highlighted,
-      inStock,
+      "slug": slug.current,
+      "colours": colours[]{
+         colourName,
+         colourPicker,
+         "thumbnail": thumbnail.asset->.url,
+         "imageAssets": images[] {
+            "image": asset->.url
+         }
+      },
+      "sizes": sizes[]-> {
+         inches,
+         US,
+         EU,
+         UK,
+      }
    },
 
    "brands": *[_type == "brands"]| order(name asc) {

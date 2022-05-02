@@ -1,18 +1,30 @@
 <template>
-   <ProductArticle/>
+   <ProductArticle :sneakerData="sneakerData" v-if="sneakerData"/>
+   <Highlighted />
 </template>
 
 <script>
 import ProductArticle from '../components/ProductArticle.vue'
-import appMixin from '../mixins/appMixin.js'
+import Highlighted from '../components/HighlightedDisplay.vue'
 
 
 export default {
    components: {
       ProductArticle,
+      Highlighted
    },
 
-   mixins: [appMixin],
+   computed: {
+      sneakerData() {
+         return this.$store.getters['getProductList'].find(sneaker => {
+            return sneaker.slug === this.sneakerParam;
+         })
+      },
+
+      sneakerParam() {
+         return this.$route.params.sneakerParam;
+      }
+   }
 }
 </script>
 

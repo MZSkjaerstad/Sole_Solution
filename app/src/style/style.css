@@ -71,3 +71,33 @@ h2 {
       fill: var(--highlight-color-y);
    }
 }
+
+@keyframes highlightedColourBorder {
+   0% {
+      border: solid var(--highlight-color-y) 2.2px;
+   }
+   33% {
+      border: solid var(--highlight-color-p) 2.2px;
+   }
+   66% {
+      border: solid var(--highlight-color-o) 2.2px;
+   }
+   100% {
+      border: solid var(--highlight-color-y) 2.2px;
+   }
+}
+
+@keyframes highlightedColourText {
+   0% {
+      color: var(--highlight-color-y);
+   }
+   33% {
+      color: var(--highlight-color-p);
+   }
+   66% {
+      color: var(--highlight-color-o);
+   }
+   100% {
+      color: var(--highlight-color-y);
+   }
+}

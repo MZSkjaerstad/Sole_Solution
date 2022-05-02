@@ -8,6 +8,8 @@
          <div class="procucts__thumbnail" v-for="product in productList">
             <router-link class="products__content" :to="`/${product.slug}`">
                <div class="product__detail">
+                  <img class="products__logo" :src="product.brand.brandLogo">
+
                   <h2 class="products__title"> {{ product.name }} </h2>
                      
                   <p class="products__price"> {{ product.price }},- </p>
@@ -35,7 +37,7 @@
 
 <style>
    .products {
-      padding: var(--spacing-medium)
+      padding: 0 var(--spacing-medium) var(--spacing-medium) var(--spacing-medium);
    }
 
    .products__header {
@@ -50,8 +52,9 @@
 
    .procucts__thumbnail {
       position: relative;
-      width: auto;
-      height: 20rem;
+      width: 100%;
+      height: 40vh;
+      border: none;
       overflow: hidden;
    }
 
@@ -65,13 +68,23 @@
       display: none;
       width: 100%;
       height: 100%;
-      color: var(--secondary-color-tr);
+      color: var(--secondary-color);
       object-fit: contain;
       z-index: 14;
       animation-name: highlightedColourTr;
       animation-duration: 10s;
       animation-iteration-count: infinite;
       animation-direction: linear;
+   }
+
+   .products__logo {
+      width: auto;
+      height: 11%;
+      margin-bottom: 6px;
+   }
+
+   .products__logo path {
+      fill-opacity: 0.5;
    }
 
    .products__price {
@@ -88,9 +101,10 @@
    }
 
    .products__image {
-      width: 110%;
-      z-index: 10;
-      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1
    }
 
    /* Hover effects */
@@ -104,6 +118,7 @@
 
    .procucts__thumbnail:hover .products__image {
       width: 140%;
+      height: 140%;
       transition: ease-out 0.2s;
    }
 </style>

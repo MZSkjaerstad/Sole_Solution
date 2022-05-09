@@ -16,7 +16,7 @@
          <Cart v-if="cartToggled === true" :toggleMenu="toggleMenu"/>
       </div>
    </header>
-   <div class="header-buffer"></div>
+   <div class="header__buffer"></div>
 </template>
 
 <script>
@@ -58,7 +58,7 @@
       z-index: 16;
    }
 
-   .header-buffer {
+   .header__buffer {
       height: 90px;
    }
 
@@ -118,5 +118,20 @@
       animation-duration: 10s;
       animation-iteration-count: infinite;
       animation-direction: linear;
+   }
+
+   @media screen and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) { 
+      .header {
+         height: 180px;
+      }
+
+      .header__buffer {
+         height: 180px;
+      }
+
+      .header__cart-button {
+         height: 180px;
+         width: 180px;
+      }
    }
 </style>

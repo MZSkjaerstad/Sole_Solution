@@ -19,12 +19,6 @@ h2 {
    text-transform: uppercase;
 }
 
-/* Media query */
-
-@media screen and (max-width: 700px) {
-
-}
-
 /* Colour animations */
 
 @keyframes highlightedColour {

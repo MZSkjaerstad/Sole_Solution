@@ -121,4 +121,10 @@
       height: 140%;
       transition: ease-out 0.2s;
    }
+
+   @media screen and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) { 
+      .products__grid {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
 </style>

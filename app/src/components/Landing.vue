@@ -83,11 +83,13 @@ export default {
       width: 100%;
       height: 85vh;
       overflow: hidden;
+      position: relative;
       display: flex;
       align-items: center;
    }
 
    .landing__image {
+      position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -161,5 +163,12 @@ export default {
       font-size: var(--font-size-body-small);
       display: flex;
       align-items: center;
+   }
+
+   @media screen and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) { 
+      .landing {
+         width: 100%;
+         height: 40vh;
+      }
    }
 </style>

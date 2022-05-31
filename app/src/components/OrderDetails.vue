@@ -42,7 +42,7 @@
          </div>
       </div>
 
-      <button class="order__button"><h3>Purchase</h3></button>
+      <button class="order__button"><h2>Purchase</h2></button>
    </section>
 </template>
 
@@ -54,7 +54,7 @@
       padding: var(--spacing-medium) var(--spacing-large);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
    }
 

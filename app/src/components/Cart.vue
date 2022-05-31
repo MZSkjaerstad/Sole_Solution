@@ -42,7 +42,7 @@
             <p>Total {{ cartPriceTotal }},-</p>
          </div>
 
-         <router-link :to="'/checkout'" class="cart__checkout">
+         <router-link :to="'/checkout'" @click="toggleMenu" class="cart__checkout">
             <h3>CHECKOUT</h3>
          </router-link>
       </div>
@@ -157,7 +157,6 @@
    }
 
    .cart__remove-button {
-      position: absolute;
       right: 0%;
       background: none;
       border: none;

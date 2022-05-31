@@ -17,7 +17,7 @@
             <img class="cart__item-image" :src="sneaker.colour.thumbnail" alt="">
 
             <div class="cart__item-details">
-               <h3> {{ sneaker.name }} </h3>
+               <h3 class="cart__item-name"> {{ sneaker.name }} </h3>
 
                <p> {{ sneaker.colour.colourName }} </p>
 
@@ -143,19 +143,26 @@
       font-size: var(--font-size-body-small);
       margin: var(--spacing-small) 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
    }
 
    .cart__item-image {
       height: 100%;
+      margin: 0 var(--spacing-small);
+   }
+
+   .cart__item-name {
+      white-space: nowrap;
    }
 
    .cart__remove-button {
+      position: absolute;
+      right: 0%;
       background: none;
       border: none;
       padding: var(--spacing-padding);
-      margin-right: 0.6rem;
+      margin-right: var(--spacing-small);
       border-radius: 8px 0 8px 0;
    }
 

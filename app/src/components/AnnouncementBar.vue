@@ -1,13 +1,21 @@
 <template>
    <section class="announcement">
-      <div class="announcement__message">
-         <h2>NEW DROP OF ADIDAS AHEELIOS THIS WEEK.</h2>
-         <h2>NEW DROP OF ADIDAS AHEELIOS THIS WEEK.</h2>
-         <h2>NEW DROP OF ADIDAS AHEELIOS THIS WEEK.</h2>
-
-      </div>
+      <h2 class="announcement__message">{{announcementBar.message}}</h2>
    </section>
 </template>
+
+<script>
+export default {
+   data() {
+      return {
+         announcementBar: {
+            message: 'new drop of adidas aheelios this weekend. airmaxorama 10.03.22 customize you own pair of air max. new balance 59/40 sold out'
+         }
+      }
+   }
+}
+</script>
+
 
 <style>
    .announcement {
@@ -17,19 +25,19 @@
       animation-iteration-count: infinite;
       animation-direction: linear;
       display: flex;
-   }
-
-   .announcement__message {
-      width: 120%;
-      color: var(--primary-color-tr);
-      display: flex;
-      justify-content: flex-end;
-      animation: marquee 15s linear infinite;
+      overflow: hidden;
       white-space: nowrap;
    }
 
+   .announcement__message {
+      padding-left: 100%;
+      color: var(--primary-color-tr);
+      animation: marquee 30s linear infinite;
+      text-transform: uppercase;
+   }
+
    @keyframes marquee {
-      0%   { transform: translateX(100%); }
-      100% { transform: translateX(-110%); }
+      0%   { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
    }
 </style>

@@ -20,6 +20,7 @@
    --font-family-body: "PTSans";
    --font-family-display: "PTSansNarrow";
 
+   --font-size-body-data: 0.7em;
    --font-size-body-small: 0.8em;
    --font-size-body-base: 20px;
    --font-size-body-large: 1.4em;
@@ -35,10 +36,6 @@
 
    /* Border */
    --border-button: 1.5px;
-
-   /* Misc */
-
-   
 }
 
 @media screen and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {

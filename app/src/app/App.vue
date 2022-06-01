@@ -1,7 +1,7 @@
 <template>
     <Header />
     <AnnouncementBar />
-    <Loading v-if="isLoading.loading === true"/>
+    <Loading v-if="isLoading === true"/>
     <RouterView v-else/>
     <Footer />
 </template>

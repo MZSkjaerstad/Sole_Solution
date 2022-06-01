@@ -41,12 +41,14 @@
             <form class="article__colour-selector">
                <label v-for="(colourSet, index) in sneakerData.colours" class="article__colourset">
                   <input id="colourSet" type="radio" v-model="orderDetails.colour" :value="colourSet" v-bind="colourSet" @click="goToColourSet(index)">
+
                   <span class="article__checkmark" :style="`background:${colourSet.colourPicker}`"></span>
                </label>
             </form>
 
             <select class="article__size-selector" v-model="orderDetails.size">
                <option disabled value="Select Size">Size</option>
+               
                <option v-for="sizeSet in sneakerData.sizes" :value="sizeSet" > {{ sizeSet.EU }} </option>
             </select>
          </div>

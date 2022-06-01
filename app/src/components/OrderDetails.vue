@@ -51,7 +51,7 @@
       width: 45%;
       height: 85vh;
       background: var(--tetriary-color);
-      padding: var(--spacing-medium) var(--spacing-large);
+      padding: var(--spacing-small) var(--spacing-large);
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -94,7 +94,7 @@
    }
 
    .order__save-message {
-      font-size: var(--font-size-body-small);
+      font-size: var(--font-size-body-data);
    }
 
    .order__button {

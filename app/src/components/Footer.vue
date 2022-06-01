@@ -13,9 +13,13 @@
             <h3 class="footer__nav-title">store</h3>
 
             <a class="footer__link" href="">Frontpage</a>
+
             <a class="footer__link" href="">Adidas</a>
+
             <a class="footer__link" href="">Nike</a>
+
             <a class="footer__link" href="">Puma</a>
+
             <a class="footer__link" href="">New balance</a>
          </div>
 
@@ -23,9 +27,13 @@
             <h3 class="footer__nav-title">info</h3>
 
             <a class="footer__link" href="">Search</a>
+
             <a class="footer__link" href="">Our terms</a>
+
             <a class="footer__link" href="">Withdrawal rights</a>
+
             <a class="footer__link" href="">FAQ</a>
+            
             <a class="footer__link" href="">About us</a>
          </div>
       </nav>

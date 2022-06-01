@@ -12,6 +12,7 @@
 
             <div class="checkout__item-info">
                <p class="checkout__item-counter"> {{ index + 1 }}. </p>
+
                <div class="checkout__item-details">
                   <h3 class="checkout__item-name"> {{ sneaker.name }} </h3>
 
@@ -33,9 +34,26 @@
       </div>
 
       <div class="checkout__data">
-            <p>Items x{{ cartData.length }}</p>
+            <div class="checkout__first-price checkout__data-item">
+               <p>Total sum</p>
+               <p>{{ cartPriceTotal }},-</p>
+            </div>
 
-            <p>Total {{ cartPriceTotal }},-</p>
+            <div class="checkout__data-item">
+               <p>Shipping</p>
+               <p>Calculated from the next step</p>
+            </div>
+
+            <div class="checkout__divider" />
+
+            <div class="checkout__first-price checkout__data-item">
+               <div>
+                  <h3>Total</h3>
+                  <p>Includes NOK 499.80 in VAT</p>
+               </div>
+
+               <h2>{{ cartPriceTotal }},-</h2>
+            </div>
       </div>
    </section>
 </template>
@@ -67,7 +85,7 @@
    .checklist {
       width: 55%;
       height: 82vh;
-      padding: var(--spacing-medium) 0 var(--spacing-medium) var(--spacing-medium);
+      padding: var(--spacing-small) 0 var(--spacing-small) var(--spacing-medium);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -75,9 +93,11 @@
    }
 
    .checkout__header {
-      padding-top: var(--spacing-medium);
+      padding-top: var(--spacing-small);
       color: var(--tetriary-color);
    }
+
+   /* Items */
 
    .checkout__item-container {
       display: flex;
@@ -92,7 +112,7 @@
       height: 40vh;
       width: 30vh;
       margin-right: var(--spacing-medium);
-      font-size: var(--font-size-body-small);
+      font-size: var(--font-size-body-data);
    }
 
    .checkout__item-counter {
@@ -135,5 +155,24 @@
       animation-duration: 10s;
       animation-iteration-count: infinite;
       animation-direction: linear;
+   }
+
+   /* Data */
+
+   .checkout__data {
+      width: 50%;
+      min-width: 20rem;
+      font-size: var(--font-size-body-data);
+   }
+
+   .checkout__data-item {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .checkout__divider {
+      width: 100%;
+      margin: var(--spacing-padding) 0;
+      border-top: solid var(--secondary-color) var(--border-button);
    }
 </style>

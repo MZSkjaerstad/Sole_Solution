@@ -1,6 +1,6 @@
 <template>
    <section class="loading">
-      <h2>Loading</h2>
+      <h2 class="loading__message">Loading</h2>
    </section>
 </template>
 
@@ -11,5 +11,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+   }
+
+   .loading__message {
+      font-style: italic;
+      animation-name: highlightedColourText;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-direction: linear;
    }
 </style>

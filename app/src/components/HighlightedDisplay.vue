@@ -38,6 +38,19 @@
          highlighted() {
             return this.$store.getters.getHighlighted;
          }
+      },
+
+      mounted() {
+         this.centerScroll()
+      },
+
+      methods: {
+         async centerScroll() {
+            const container = document.querySelector('.highlighted__container')
+            let scrollLength = container.offsetWidth;
+            let halfLength = scrollLength / 2;
+            container.scrollTo({left: halfLength})
+         }
       }
    }
 </script>
@@ -50,7 +63,7 @@
    }
 
    .highlighted__header {
-      padding: var(--spacing-medium) 0;
+      padding: var(--spacing-medium) 0 var(--spacing-padding) 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -63,10 +76,13 @@
    /* Container */
 
    .highlighted__container {
+      padding: var(--spacing-medium) 0;
       width: 100%;
       max-width: 100%;
       display: flex;
       overflow-x: scroll;
+      transition: 0.4s;
+      scroll-behavior: smooth;
    }
 
    .highlighted__container::-webkit-scrollbar {
@@ -125,6 +141,11 @@
    }
 
    /* Hover*/
+
+   .highlighted__container:hover {
+      background: var(--secondary-color);
+      transition: 0.4s;
+   }
    
    .highlighted__thumbnail:hover .highlighted__detail {
       display: flex;
